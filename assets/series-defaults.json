@@ -1,0 +1,14 @@
+{
+  "duration_seconds": 60,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "voice": "none",
+  "music_source": null,
+  "music_fade_in_seconds": 1.5,
+  "music_fade_out_seconds": 1.5,
+  "auxiliary_explanatory_labels": false,
+  "caption_size": 46,
+  "caption_fade_seconds": 0.1,
+  "style_policy": "Choose a content-specific visual system and compare its material, composition, motifs and motion with previous films. Palette changes alone do not establish a new style."
+}
