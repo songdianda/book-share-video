@@ -1,0 +1,4 @@
+interface:
+  display_name: "图书分享视频"
+  short_description: "核对书籍来源，制作风格多样的竖屏读书动画、背景音乐和完整 MP4 视频"
+  default_prompt: "使用 $book-share-video，围绕这本书制作约60秒竖屏视频，沿用原背景音乐，无配音和说明性小字，风格与近作不同。"
