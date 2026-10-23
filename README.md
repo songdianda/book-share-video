@@ -57,11 +57,12 @@ git clone https://github.com/songdianda/book-share-video.git ~/.agents/skills/bo
 cd ~/.agents/skills/book-share-video
 python3.12 -m venv .venv
 .venv/bin/python -m pip install --require-hashes -r requirements.lock
-.venv/bin/python scripts/check_env.py --browser chrome --json
+.venv/bin/python engine/get_fonts.py
 .venv/bin/python engine/get_fonts.py --check
+.venv/bin/python scripts/check_env.py --browser chrome --json
 ```
 
-已有 Chrome 可用 `--browser chrome`。没有可用浏览器时，可单独运行 `.venv/bin/python -m playwright install chromium` 下载浏览器，随后使用渲染器默认 Chromium；不需要为此执行系统级 `--with-deps`。字体与 OFL 许可证随仓库提供，缺失时参照字体脚本和 [复用说明](references/reuse.md) 补齐。`LOCAL-RUNTIME.md` 是环境记录模板，不代表当前机器已经通过检查。
+已有 Chrome 可用 `--browser chrome`。没有可用浏览器时，可单独运行 `.venv/bin/python -m playwright install chromium` 下载浏览器，随后使用渲染器默认 Chromium；不需要为此执行系统级 `--with-deps`。公开仓库保留其余字体与全部 OFL 许可证；受本次 GitHub 网页单文件 25 MB 上传限制，未收录较大的 `engine/fonts/NotoSerifSC-VF.ttf`。首次安装须先运行上面的 `engine/get_fonts.py`，从官方 Google Fonts 补齐缺失字体，再运行字体及环境检查。该脚本只下载缺失或无效的字体与许可证，不重复下载有效文件。详情见 [复用说明](references/reuse.md)。`LOCAL-RUNTIME.md` 是环境记录模板，不代表当前机器已经通过检查。
 
 本仓库不要求图像生成、配音或云视频 API；默认动画在本地用 Canvas 绘制。来源查询可能需要联网，首次安装依赖或补齐字体与浏览器也需要网络。
 
